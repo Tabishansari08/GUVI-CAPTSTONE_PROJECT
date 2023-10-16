@@ -214,7 +214,7 @@ if selected == "Explore Data":
             st.markdown("## :violet[Overall State Data - Transactions Count]")
             mycursor.execute(f"select state, sum(count) as Total_Transactions, sum(amount) as Total_amount from map_trans where year = {Year} and quarter = {Quarter} group by state order by state")
             df1 = pd.DataFrame(mycursor.fetchall(),columns= ['State', 'Total_Transactions', 'Total_amount'])
-            df2 = pd.read_csv(r'F:\Data Science\project 2\Data files\Statenames.csv')
+            df2 = pd.read_csv(r'C:\Users\ACER\PycharmProjects\pythonProject2\Data files\Statenames.csv')
             df1.Total_Transactions = df1.Total_Transactions.astype(int)
             df1.State = df2
 
@@ -320,7 +320,7 @@ if selected == "About":
         st.write("##### PhonePe is India's leading fintech platform with over 300 million registered users. Using PhonePe, users can send and receive money, recharge mobile, DTH, pay at stores, make utility payments, buy gold and make investments. PhonePe forayed into financial services in 2017 with the launch of Gold providing users with a safe and convenient option to buy 24-karat gold securely on its platform. PhonePe has since launched several Mutual Funds and Insurance products like tax-saving funds, liquid funds, international travel insurance and Corona Care, a dedicated insurance product for the COVID-19 pandemic among others. PhonePe also launched its Switch platform in 2018, and today its customers can place orders on over 600 apps directly from within the PhonePe mobile app. PhonePe is accepted at 20+ million merchant outlets across Bharat")
         
         st.write("**:violet[My Project GitHub link]** ⬇️")
-        st.write("")
+        st.write("https://github.com/Tabishansari08/GUVI-CAPTSTONE_PROJECT/blob/main")
         st.write("**:violet[Image and content source]** ⬇️")
         st.write("https://www.prnewswire.com/in/news-releases/phonepe-launches-the-pulse-of-digital-payments-india-s-first-interactive-geospatial-website-888262738.html")
         
